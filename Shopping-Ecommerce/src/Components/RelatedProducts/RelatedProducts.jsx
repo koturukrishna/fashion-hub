@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./RelatedProducts.css";
-import data_product from "../Assets/data";
 import Item from "../Item/Item";
 import axios from "axios";
 const RelatedProducts = () => {
@@ -31,10 +30,7 @@ const RelatedProducts = () => {
               key={i}
               id={item._id}
               name={item.name}
-              image={`http://localhost:5000/${item.photo?.replace(
-                "public",
-                ""
-              )}`}
+              image={item.photo}
               new_price={item.new_price}
               old_price={item.old_price}
             />

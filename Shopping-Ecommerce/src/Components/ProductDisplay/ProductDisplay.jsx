@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
-import { ShopContext } from "../../Context/ShopContext";
 import { addCartItem } from "../ReduxStore/GloalCartStore";
 import { useDispatch } from "react-redux";
 
@@ -12,11 +11,12 @@ const ProductDisplay = (props) => {
 
   // console.log(product.photo, "krishna");
 
-  const { addToCart } = useContext(ShopContext);
-  const imageUrl = `http://localhost:5000/${product.photo?.replace(
-    "public",
-    ""
-  )}`;
+  // const imageUrl = `http://localhost:5000/${product.photo?.replace(
+  //   "public",
+  //   ""
+  // )}`;
+
+  const imageUrl = product.photo;
 
   const [selectedSize, setSelectedSize] = useState(null); // Store selected size
 
@@ -59,13 +59,6 @@ const ProductDisplay = (props) => {
         </div>
         <div className="productdisplay-right-size">
           <h1>Select Size</h1>
-          {/* <div className="productdisplay-right-sizes">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXl</div>
-          </div> */}
 
           <div className="size-container">
             {sizes.map((size) => (

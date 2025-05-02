@@ -3,14 +3,16 @@ const multer = require("multer");
 const { Product } = require("../models/Product");
 const ensureAuthenticated = require("../middleware/auth");
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/uploads/"); // Store uploaded files in the 'uploads' folder
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname); // Use the original file name
-  },
-});
+const { storage } = require("../cloudinaryConfig");
+
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "public/uploads/"); // Store uploaded files in the 'uploads' folder
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.originalname); // Use the original file name
+//   },
+// });
 
 const upload = multer({ storage });
 
@@ -24,7 +26,7 @@ router.post(
 
     try {
       const { name, category, old_price, new_price } = req.body;
-      const photo = req.file.path.replace(/\\/g, "/").replace("public/", "");
+      const photo = req.file.path;
 
       const product = new Product({
         name,
@@ -45,7 +47,7 @@ router.post(
   }
 );
 
-// 📦 Get All Products
+//  Get All Products
 router.get("/", async (req, res) => {
   try {
     const products = await Product.find();

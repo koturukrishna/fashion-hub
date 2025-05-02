@@ -159,25 +159,7 @@ const AddProduct = () => {
             onChange={handleChange}
           />
         </div>
-        {/* {showProducts.map((product) => {
-          return (
-            <div key={product._id}>
-              <p>{product.name}</p>
-              <img
-                src={`http://localhost:5000/${product.photo?.replace(
-                  "public",
-                  ""
-                )}`}
-                // alt={`${product.photo}`}
-                alt={`http://localhost:5000/${product.photo?.replace(
-                  "public",
-                  ""
-                )}`}
-                style={{ width: "210px", height: "130px" }}
-              />
-            </div>
-          );
-        })} */}
+
         <button onClick={handleAddProduct}>Add Product</button>
       </div>
       <ToastContainer />

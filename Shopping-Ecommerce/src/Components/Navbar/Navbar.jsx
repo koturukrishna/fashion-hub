@@ -1,27 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../../Context/ShopContext";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
-  const { cartItems } = useContext(ShopContext);
 
   const cartItems2 = useSelector((state) => state.cartListItems.cartItems);
-  const dispatch = useDispatch();
-
-  // {all_product.map((e)=>{
-  //   if(cartItems[e.id]>0)
-  // console.log("cart items", cartItems);
-
-  // let countCartItems = 0;
-  // for (let a in cartItems) {
-  //   if (cartItems[a] > 0) {
-  //     countCartItems += 1;
-  //   }
-  // }
 
   return (
     <div className="navbar">
@@ -81,6 +67,9 @@ const Navbar = () => {
         {cartItems2.length > 0 && (
           <div className="nav-cart-count">{cartItems2.length}</div>
         )}
+        <Link to="/add-product">
+          <button className="add-item">Add Item</button>
+        </Link>
       </div>
     </div>
   );

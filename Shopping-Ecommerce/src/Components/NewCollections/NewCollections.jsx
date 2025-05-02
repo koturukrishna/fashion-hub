@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./NewCollections.css";
-import new_collection from "../Assets/new_collections";
 import Item from "../Item/Item";
 import { ShopContext } from "../../Context/ShopContext";
 
@@ -21,10 +20,7 @@ const NewCollections = () => {
               key={i}
               id={item._id}
               name={item.name}
-              image={`http://localhost:5000/${item.photo?.replace(
-                "public",
-                ""
-              )}`}
+              image={item.photo}
               new_price={item.new_price}
               old_price={item.old_price}
             />

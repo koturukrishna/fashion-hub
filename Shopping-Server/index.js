@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth.js");
 const productRoutes = require("./routes/products.js");
 
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/uploads", express.static("public/uploads"));
 
@@ -16,7 +17,7 @@ app.use("/auth", authRoutes);
 app.use("/products", productRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = 5000;
+const PORT = process.env.PORT || 8000;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,

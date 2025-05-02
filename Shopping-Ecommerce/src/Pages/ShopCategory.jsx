@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CSS/ShopCategory.css";
 import axios from "axios";
 import Item from "../Components/Item/Item";
@@ -47,7 +47,7 @@ const ShopCategory = (props) => {
           <select
             name="sortValue"
             value={sortValue}
-            defaultValue={"low"}
+            // defaultValue={"low"}
             onChange={(e) => setSortValue(e.target.value)}
             className="shopcategory-sort"
             style={{ paddingRight: "10px" }}
@@ -65,10 +65,7 @@ const ShopCategory = (props) => {
                 key={i}
                 id={item._id}
                 name={item.name}
-                image={`http://localhost:5000/${item.photo?.replace(
-                  "public",
-                  ""
-                )}`}
+                image={item.photo}
                 new_price={item.new_price}
                 old_price={item.old_price}
               />

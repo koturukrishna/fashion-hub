@@ -72,10 +72,11 @@ const CartItems = () => {
                 <div className="cartitems-format cartitems-format-main">
                   <img
                     className="carticon-product-icon"
-                    src={`http://localhost:5000/${e.photo?.replace(
-                      "public",
-                      ""
-                    )}`}
+                    // src={`http://localhost:5000/${e.photo?.replace(
+                    //   "public",
+                    //   ""
+                    // )}`}
+                    src={e.photo}
                     onClick={() => {
                       // removeFromCart(e._id);
                       dispatch(deleteCartItem(e._id));
