@@ -12,7 +12,7 @@ I’m thrilled to share that I’ve built Fashion Hub, an online clothing store 
 🔹 Authentication: JWT-based secure login system
 This project was a great learning experience in state management, backend API development, authentication, and full-stack integration.
 
-![Uploading fashion-hub-krishna.netlify.app_mens.png…]()
+
 
 ![image](https://github.com/user-attachments/assets/ce75199a-3a19-46ff-929c-a10e7305038c)
 
