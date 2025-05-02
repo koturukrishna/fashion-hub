@@ -1,4 +1,4 @@
-## Fashion Hub - My Full-Stack E-Commerce Application! 
+# Fashion Hub - My Full-Stack E-Commerce Application! 
 I’m thrilled to share that I’ve built Fashion Hub, an online clothing store developed using React.js, Node.js, MongoDB, and Redux Toolkit. This project showcases my skills in full-stack development and state management.
 ## Key Features:
 ✅ User-Friendly Shopping Experience – Customers can browse and select clothes effortlessly.
@@ -13,4 +13,6 @@ I’m thrilled to share that I’ve built Fashion Hub, an online clothing store 
 This project was a great learning experience in state management, backend API development, authentication, and full-stack integration.
 
 ![Uploading fashion-hub-krishna.netlify.app_mens.png…]()
+
+![image](https://github.com/user-attachments/assets/ce75199a-3a19-46ff-929c-a10e7305038c)
 
