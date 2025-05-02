@@ -13,6 +13,7 @@ const AddProduct = () => {
   });
 
   const [photo, setPhoto] = useState(null);
+  // eslint-disable-next-line
   const [showProducts, setShowProducts] = useState([]);
 
   const handleUploadPhotos = (e) => {
@@ -34,7 +35,7 @@ const AddProduct = () => {
       },
     };
     try {
-      const url = "http://localhost:5000/products";
+      const url = "https://fashion-hub-jz6j.onrender.com/products";
       const { data: res } = await axios.post(url, data, headers);
       console.log("product response", res);
       // alert("Product added successfully");
@@ -96,7 +97,9 @@ const AddProduct = () => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get("http://localhost:5000/products");
+      const res = await axios.get(
+        "https://fashion-hub-jz6j.onrender.com/products"
+      );
       const data = await res.data;
       // console.log("Data", data);
       setShowProducts(data);

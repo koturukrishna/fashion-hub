@@ -11,7 +11,7 @@ const ProductDisplay = (props) => {
 
   // console.log(product.photo, "krishna");
 
-  // const imageUrl = `http://localhost:5000/${product.photo?.replace(
+  // const imageUrl = `https://fashion-hub-jz6j.onrender.com/${product.photo?.replace(
   //   "public",
   //   ""
   // )}`;

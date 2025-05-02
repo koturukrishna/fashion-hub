@@ -1,14 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./CartItems.css";
-import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCartItem } from "../ReduxStore/GloalCartStore";
 import { useNavigate } from "react-router-dom";
 
 const CartItems = () => {
-  const { getTotalCartAmount, products, cartItems, removeFromCart } =
-    useContext(ShopContext);
   //   console.log("Cart Total Amount", getTotalCartAmount());
 
   const cartItems2 = useSelector((state) => state.cartListItems.cartItems);
@@ -22,7 +19,6 @@ const CartItems = () => {
   if (cartItems2.length > 0) {
     total = totalPrice.reduce((acc, new_price) => acc + new_price);
   }
-  const itemsCount = cartItems2.length;
 
   const navigate = useNavigate();
   const [promoCode, setPromoCode] = useState("");
@@ -72,7 +68,7 @@ const CartItems = () => {
                 <div className="cartitems-format cartitems-format-main">
                   <img
                     className="carticon-product-icon"
-                    // src={`http://localhost:5000/${e.photo?.replace(
+                    // src={`https://fashion-hub-jz6j.onrender.com/${e.photo?.replace(
                     //   "public",
                     //   ""
                     // )}`}

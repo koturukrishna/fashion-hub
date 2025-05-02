@@ -14,7 +14,9 @@ const Product = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/products");
+        const res = await axios.get(
+          "https://fashion-hub-jz6j.onrender.com/products"
+        );
         setProducts(res.data);
         // console.log("Products", res.data);
       } catch (error) {

@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import all_product from "../Components/Assets/all_product";
 
 export const ShopContext = createContext(null);
 
@@ -16,7 +15,9 @@ const ShopContextProvider = (props) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get("http://localhost:5000/products");
+      const res = await axios.get(
+        "https://fashion-hub-jz6j.onrender.com/products"
+      );
       const data = await res.data;
       // console.log("Data", data);
       setProducts(data);
@@ -26,13 +27,13 @@ const ShopContextProvider = (props) => {
 
   // console.log("All Products", products);
 
-  const getDefaultCart = () => {
-    let cart = {};
-    for (let index = 0; index < products?.length + 1; index++) {
-      cart[index] = 0;
-    }
-    return cart;
-  };
+  // const getDefaultCart = () => {
+  //   let cart = {};
+  //   for (let index = 0; index < products?.length + 1; index++) {
+  //     cart[index] = 0;
+  //   }
+  //   return cart;
+  // };
 
   const [cartItems, setCartItems] = useState([]);
 

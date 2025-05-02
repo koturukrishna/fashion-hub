@@ -33,7 +33,7 @@ const LoginSignup = () => {
   const handleRegistrationSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/auth/register",
+        "https://fashion-hub-jz6j.onrender.com/auth/register",
         userDetails
       );
       // console.log("response", response);
@@ -68,7 +68,7 @@ const LoginSignup = () => {
 
   const handleLoggedInUSer = async () => {
     try {
-      const url = "http://localhost:5000/auth/login";
+      const url = "https://fashion-hub-jz6j.onrender.com/auth/login";
       const { data: res } = await axios.post(url, userDetails);
       console.log("login response", res);
 

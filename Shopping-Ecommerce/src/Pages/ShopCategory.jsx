@@ -10,7 +10,9 @@ const ShopCategory = (props) => {
 
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get("http://localhost:5000/products");
+      const res = await axios.get(
+        "https://fashion-hub-jz6j.onrender.com/products"
+      );
       const data = await res.data;
       // console.log("Popular Data", data);
       setProducts(data);

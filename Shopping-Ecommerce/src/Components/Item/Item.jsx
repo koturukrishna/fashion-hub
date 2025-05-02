@@ -10,9 +10,9 @@ const Item = (props) => {
       <Link to={`/product/${props.id}`}>
         <img
           onClick={window.scrollTo(0, 0)}
-          // src={`http://localhost:5000/${props.photo?.replace("public", "")}`}
+          // src={`https://fashion-hub-jz6j.onrender.com/${props.photo?.replace("public", "")}`}
           src={props.image}
-          // src="http://localhost:5000/uploads/product_1.png"
+          // src="https://fashion-hub-jz6j.onrender.com/uploads/product_1.png"
           // style={{ width: "250px", height: "170px" }}
 
           className="popular-image"
