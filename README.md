@@ -14,5 +14,5 @@ This project was a great learning experience in state management, backend API de
 
 
 
-![image]([https://github.com/user-attachments/assets/ce75199a-3a19-46ff-929c-a10e7305038c](https://github.com/koturukrishna/fashion-hub/blob/master/fashion-hub-krishna.netlify.app_mens.png?raw=true))
+![image](https://github.com/koturukrishna/fashion-hub/blob/master/fashion-hub-krishna.netlify.app_mens.png?raw=true)
 
